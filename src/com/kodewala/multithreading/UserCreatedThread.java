@@ -19,6 +19,9 @@ public class UserCreatedThread {
 		d2.start(); // this will create a new thread (register a thread in thread scheduler)
 		System.out.println("END: main() method is executed by thread: " + Thread.currentThread().getName());
 
+		// d2.start(); // Exception in thread "main"
+		// java.lang.IllegalThreadStateException
+
 		/// We cannot predict the execution order because thread execution is controlled
 		/// by the
 		/// thread scheduler and CPU availability.
