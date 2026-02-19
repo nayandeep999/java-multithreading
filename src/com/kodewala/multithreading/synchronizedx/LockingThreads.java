@@ -9,10 +9,10 @@ class PrintNumbers {
 	}
 }
 
-class Worker extends Thread {
+class Workerx extends Thread {
 	PrintNumbers pn;
 
-	Worker(PrintNumbers pn) {
+	Workerx(PrintNumbers pn) {
 		this.pn = pn;
 	}
 
@@ -34,12 +34,12 @@ public class LockingThreads {
 		// Now the other thread can acquire this lock and execute the sync part
 
 		PrintNumbers pn = new PrintNumbers();
-		Worker t1 = new Worker(pn);
+		Workerx t1 = new Workerx(pn);
 
 		t1.setName("T1");
 		t1.start();
 
-		Worker t2 = new Worker(pn);
+		Workerx t2 = new Workerx(pn);
 		t2.setName("T2");
 		t2.start();
 
